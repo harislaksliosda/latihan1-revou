@@ -2,14 +2,96 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="header.css">
+        <style>
+            .content {
+                flex-direction: row;
+                display: flex;
+            }
+            .content > div {
+                display: flex;
+                flex: 1;
+                align-content: center;
+                justify-content: center;
+            }
+            footer > p {
+                text-align: end;
+                justify-content: flex-end;
+            }
+            .table_person {
+                border: 5px ridge black;
+
+            }
+            .form {
+                justify-content: flex-start;
+            }
+            .submit {
+                align-content: center;
+            }
+        </style>
     </head>
     <body>
         <nav class="container">
             <img src="https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Revou-alasan.original.png" class="logo" width="40" height="40" />
 
             <div class="home">Home</div>
-            <div class="search">Search</div>
-            <div class="logout">Logout</div>
+            <div class="my_profile">My Profile</div>
+            <div class="portofolio">Portofolio</div>
+            <div class="messange_us">Message Us</div>
         </nav>
+        <header>
+            <h1>Form Belajar</h1>
+            <p>Ini adalah website latihan pertama</p>
+        </header>
+
+        <main class="content">
+
+            <div>
+                <form class="form" action="https://www.google.com" method="POSt">
+                    <label for="name">Nama : </label>
+                    <input id="name" type="text"/>
+                    <br>
+                    <label for="tanggal_lahir">Tanggal Lahir : </label>
+                    <input id="tanggal_lahir" type="date"/>
+                    <br>
+                    <label for="jenis_kelamin">Jenis Kelamin : </label>
+                    <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki">
+                    <label for="laki-laki">Laki-laki</label>
+                    <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+                    <label for="perempuan">Perempuan</label>
+                    <br>
+                    <label for="pesan">Pesan : </label>
+                    <textarea id="pesan" name="pesan" rows="4" cols="30">
+                    </textarea>
+                    <br>
+                    <input class="submit" type="submit" value="Submit">
+                    
+                </form>
+            </div>
+
+            <div>
+                <table class="table_person">
+                    <tr>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pesan</th>
+                        <th>Profile</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Test1</td>
+                        <td>12 Januari 1996</td>
+                        <td>Laki-laki</td>
+                        <td>Belajar buat website</td>
+                        <td><a href="#">Klik Disini</a></td>
+                        <td>Gambar</td>
+                    </tr>
+                </table>
+            </div>
+
+        </main>
+        <footer>
+            <p>Revou 2023</p>
+        </footer>
     </body>
 </html>
